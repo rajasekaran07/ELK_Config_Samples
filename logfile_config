@@ -1,0 +1,14 @@
+input {
+  file {
+    path => "/var/log/jenkins/jenkins.log"
+    start_position => "beginning"
+    type=> "inline_attributes"
+  }
+}
+output {
+  elasticsearch{
+    hosts => "search-myloges-wis2bqm5o652cxozlhbou7vbwe.us-east-1.es.amazonaws.com:80"
+#    port => 80
+#    protocol => "http"
+}
+}
