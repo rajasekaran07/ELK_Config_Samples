@@ -1,0 +1,13 @@
+input {
+  gelf {
+type => "gelf"
+port => 2233
+ }
+}
+output {
+  elasticsearch{
+    hosts => "search-**********-d4drmddjqptuhcy25bm4nmjyai.us-east-1.es.amazonaws.com:80"
+#    port => 80
+#    protocol => "http"
+}
+}
