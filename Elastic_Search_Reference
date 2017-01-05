@@ -1,0 +1,34 @@
+Load json data in AWS Elasticsearch:
+curl -XPOST 'https://search-*********-yohczydtupz65i2wz2ujsxac6y.us-east-1.es.amazonaws.com/_bulk' --data-binary @test.json
+
+Delete index:
+curl -XDELETE 'https://search-********-yohczydtupz65i2wz2ujsxac6y.us-east-1.es.amazonaws.com/products/'
+
+View index data only supermarket exists.
+curl -XGET https://search-********-yohczydtupz65i2wz2ujsxac6y.us-east-1.es.amazonaws.com/products/_search?q=supermarket:*
+
+
+test.json
+
+{ "index": {"_index": "products", "_type": "product", "_id": 1} }
+{ "title": "Product A","description": "Brand A - Product A - 1.5 kg","price": 3.49,"sku": "wi208564","supermarket": "AJ","categories": "Fruit AJ","product_type": "Sinaasappels - mandarijnen","brand": "Brand A\n"}
+{ "index": {"_index": "products", "_type": "product", "_id": 2} }
+{ "title": "Product B","description": "Brand B - Product B - 1 kg","price": 2.49,"sku": "wi308564","supermarket": "AJ","categories": "Fruit AJ","product_type": "Sinaasappels - mandarijnen","brand": "Brand B\n"}
+{ "index": {"_index": "products", "_type": "product", "_id": 9}} }
+{ "title": "Product C","description": "Brand A - Product A - 1.5 kg","price": 3.9,"sku": "wi208564","supermarket": "AJ","categories": "Fruit AJ","product_type": "Sinaasappels - mandarijnen","brand": "Brand A\n"}
+{ "index": {"_index": "products", "_type": "product", "_id": 3}} }
+{ "title": "Product D","description": "Brand A - Product A - 1.5 kg","price": 3.10,"sku": "wi208564","supermarket": "AJ","categories": "Fruit AJ","product_type": "Sinaasappels - mandarijnen","brand": "Brand A\n"}
+{ "index": {"_index": "products", "_type": "product", "_id": 4} }
+{ "title": "Product E","description": "Brand A - Product A - 1.5 kg","price": 3.12,"sku": "wi208564","supermarket": "AJ","categories": "Fruit AJ","product_type": "Sinaasappels - mandarijnen","brand": "Brand A\n"}
+{ "index": {"_index": "products", "_type": "product", "_id": 5} }
+{ "title": "Product F","description": "Brand A - Product A - 1.5 kg","price": 3.21,"sku": "wi208564","supermarket": "AJ","categories": "Fruit AJ","product_type": "Sinaasappels - mandarijnen","brand": "Brand A\n"}
+{ "index": {"_index": "products", "_type": "product", "_id": 6} }
+{ "title": "Product G","description": "Brand A - Product A - 1.5 kg","price": 3.40,"sku": "wi208564","supermarket": "AJ","categories": "Fruit AJ","product_type": "Sinaasappels - mandarijnen","brand": "Brand A\n"}
+{ "index": {"_index": "products", "_type": "product", "_id": 7} }
+{ "title": "Product H","description": "Brand A - Product A - 1.5 kg","price": 3.45,"sku": "wi208564","supermarket": "AJ","categories": "Fruit AJ","product_type": "Sinaasappels - mandarijnen","brand": "Brand A\n"}
+{ "index": {"_index": "products", "_type": "product", "_id": 8} }
+{ "title": "Product I","description": "Brand A - Product A - 1.5 kg","price": 3.75,"sku": "wi208564","supermarket": "AJ","categories": "Fruit AJ","product_type": "Sinaasappels - mandarijnen","brand": "Brand A\n"}
+{ "index": {"_index": "products", "_type": "product", "_id": 10} }
+{ "title": "Product J","description": "Brand A - Product A - 1.5 kg","price": 3.45,"sku": "wi208564","categories": "Fruit AJ","product_type": "Sinaasappels - mandarijnen","brand": "Brand A\n"}
+{ "index": {"_index": "products", "_type": "product", "_id": 112} }
+{ "title": "Product K","description": "Brand A - Product A - 1.5 kg","sku": "wi208564","supermarket": "AJ","categories": "Fruit AJ","product_type": "Sinaasappels - mandarijnen","brand": "Brand A\n"}
